@@ -25,47 +25,52 @@ Coche que va por una carretera esquivando baches.
 
 
 ## Data structure
-html {
 
-}
-class main {
+### html {
     Pantalla Inicio
     Pantalla Final.
     Canvas.
+
+}
+br
+
+#  main {
     Pincel.
     Jugar de nuevo (Para poder hacer una nueva version de "clase Game" cada vez, creamos "jugar de nuevo").
+    Empezar juego.
+    Terminar juego.
 }
+br
 
-
-clase Game {
+### clase Game {
     Propiedades: Fondo, Coche, Bache como array, distancia entre baches.
     Colision Coche-Bache.
-    Terminar juego.
-    Empezar juego.
+    Loop de juego.
     Dibujar coche y baches.
     Mover el coche y los baches.
 }
+br
 
-clase Coche {
+### clase Coche {
     Propiedades: Posicion, imagen, tamaño.
     Movimiento.
 }
 
-clase Bache {
+### clase Bache {
     Propiedades: Posicion, imagen, tamaño.
     Movimiento.
 
 }
 
 
-## States y States Transitions
+### States y States Transitions
 
 - splashScreen.
 - gameScreen.
 - gameoverScreen.
 
 
-## Task
+### Task
 
 - Conseguir Imagenes.
 - Crear la estructura (clases y HTML).
@@ -76,7 +81,7 @@ clase Bache {
 
 
 
-## Additional Links
+### Additional Links
 
 
 ### Trello
