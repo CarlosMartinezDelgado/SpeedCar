@@ -5,8 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>SpeedCar1</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body background= "./imagenes/carretera2.jpeg">
+    <div class="container">    
+
+        <div id="pantalla-inicio" class="container">
+            <!-- imagen INICIO-->
+            <img src="https://st2.depositphotos.com/5486388/8033/v/950/depositphotos_80334926-stock-illustration-car-logo-template.jpg" width="500" alt="logo">
+ 
+            <button id="start-btn">START</button>
+        </div>
+
+
+        <canvas id="my-canvas" width="400" height="2000" ></canvas>
+    
+
+        <div id="pantalla-reinicio" class="container">
+            
+            <img src="./images/Game-Over.png" width="500" alt="logo">
+            <button id="restart-btn">Play Again</button>
+            <!-- imagen REINICIO -->
+        </div>
+    </div>
+    <script src="./javascript/main.js"></script>
+    <script src="./javascript/game.js"></script>
+    <script src="./javascript/car.js"></script>
+    <script src="./javascript/pothole.js"></script>
+
     
 </body>
 </html>
+
+

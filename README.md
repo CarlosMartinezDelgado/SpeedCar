@@ -20,6 +20,7 @@ Coche que va por una carretera esquivando baches.
  - El juego acaba al terminar el tiempo.
  - Al finalizar el juego haga recuento de kilometros.
  - Con  boton de inicio el juego arranque con un modelo diferente de coche.
+ - Boton de like.
 
 
 
