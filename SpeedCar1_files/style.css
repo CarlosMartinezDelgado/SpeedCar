@@ -1,7 +1,6 @@
 body {
     margin: 0;
     background-size: cover;
-    background-color: black;
 
   }
   
@@ -27,24 +26,25 @@ body {
 
 #restart-btn {
 
-    background-color: rgb(27, 141, 211);
-    color: rgb(208, 20, 20);
+    background-color: rgb(10, 153, 241);
+    color: rgb(168, 18, 18);
     font-weight: bold;
     font-size: 20px; 
     padding: center;
     opacity: unset;
     letter-spacing: 0.2ch;
+    margin-top: 20px;
     border-radius: 40px;
-    width: 180px;
-    height: 120px;
+    width: 200px;
+    height: 140px;
     background-clip: text; 
-    text-shadow: 1px 1px 1px 
+    text-shadow: 2px 2px 4px 
     rgba(0, 0, 0, 0.5), 
     2px -2px 0 
     rgba(8, 8, 8, 0.9);
-    font-family: Roboto,HelveticaNeue,Arial,sans-serif;
-    margin-top: -6em;
-    margin-left: 16em;
+    font-family: "Bold-italic";
+    margin-top: -3em;
+    margin-left: 15em;
  
 
 }
@@ -59,14 +59,12 @@ body {
   
   #pantalla-inicio {
     display: flex;
-    background-size: cover;
-    box-shadow: 10px 5px 5px black; 
+    background-size: cover 
     /* ocultamos la pantalla dependiendo la que queramos activa*/
   }
 
   #pantalla-reinicio {
     display: flex;
-    box-shadow: 10px 5px 5px rgb(109, 107, 107);
   }
 
   #my-canvas {
