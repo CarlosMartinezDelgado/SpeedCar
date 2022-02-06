@@ -54,23 +54,23 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 50px;
+    margin: 0px;
   }
   
   #pantalla-inicio {
-    display: flex;
+    display: none;
     background-size: cover;
     box-shadow: 10px 5px 5px black; 
     /* ocultamos la pantalla dependiendo la que queramos activa*/
   }
 
   #pantalla-reinicio {
-    display: flex;
+    display: none;
     box-shadow: 10px 5px 5px rgb(109, 107, 107);
   }
 
   #my-canvas {
-    display: none;
+    display: flex;
     background-size: cover;
     background-color: lemonchiffon; 
     /* ocultamos la pantalla dependiendo la que queramos activa*/
