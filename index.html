@@ -3,35 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>SpeedCar1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpeedRacer1</title>   
     <link rel="stylesheet" href="./css/style.css">
-</head>
-<body background= "./imagenes/FondoCarretera.jpeg">
-    <div class="container">    
 
-        <div id="pantalla-inicio" class="container">
+</head>
+
+<body background="./imagenes/bg1 copia.jpeg">
+    <div class="container">    
+    
+        <div id="pantalla-inicio"> 
             <!-- imagen INICIO-->
-            <img src="https://st2.depositphotos.com/5486388/8033/v/950/depositphotos_80334926-stock-illustration-car-logo-template.jpg" width="500" alt="logo">
- 
+            <img src="./imagenes/paginicio2.jpeg" alt="logo">
             <button id="start-btn">START</button>
         </div>
-
-
-        <canvas id="my-canvas" width="400" height="2000" ></canvas>
     
-
+        <!-- Pantalla inicial juego -->
+        <canvas id="my-canvas" width="920" height="1000"></canvas>
+        
+    
         <div id="pantalla-reinicio" class="container">
-            
-            <img src="./imagenes/gameover.png" width="500" alt="logo">
-            <button id="restart-btn">PLAY AGAIN!</button>
-            <!-- imagen REINICIO -->
+             <!-- imagen REINICIO -->               
+            <img src="./imagenes/gameoverDani.png" width="920" height="1000" alt="logo">
+            <button id="restart-btn">𝙋𝙇𝘼𝙔 𝘼𝙂𝘼𝙄𝙉!</button>
         </div>
     </div>
-    <script src="./javascript/main.js"></script>
-    <script src="./javascript/game.js"></script>
-    <script src="./javascript/car.js"></script>
-    <script src="./javascript/pothole.js"></script>
+
+
+    <script src="javascript/bump.js"></script>
+    <script src="javascript/main.js"></script>
+    <script src="javascript/game.js"></script>
+    <script src="javascript/car.js"></script>
+
 
     
 </body>
