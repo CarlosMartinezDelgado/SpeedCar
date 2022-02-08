@@ -3,15 +3,15 @@ class Car {
       //aqui las propiedades de nuestro coche.
 
       this.x = canvas.width / 2; //posicion
-      this.y = canvas.height - 100;
+      this.y = canvas.height - 150;
   
-      this.width = 150;
-      this.height = 150; //tamaño
+      this.width = 80;
+      this.height = 120; //tamaño
   
       this.img = new Image(); //imagen
       this.img.src = "./imagenes/coche1.png";
 
-      this.lateralSpeed = 50 
+      this.speedCar = 5 
   
     }
   
@@ -25,6 +25,15 @@ class Car {
   
 
       // Movimiento lateral del coche de Izq y Dcha
+    moveCar = (event) => {
+      if (event.key === "ArrowLeft") {
+        this.x = this.x - this.speedCar
+      }else if (event.key === "ArrowRight") {
+        this.x = this.x + this.speedCar
+      }
+    }
+
+/*
     carMoveLeft = () => {
       this.x = this.x - (this.lateralSpeed)*2
       console.log(`El coche se ha movido a la izquierda, nueva x = ${this.x}`)
@@ -33,6 +42,5 @@ class Car {
       this.x = this.x + 2
       console.log(`El coche se ha movido a la derecha, nueva x = ${this.x}`)
     }
-    
+      */
   }
-  

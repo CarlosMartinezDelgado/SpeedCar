@@ -9,23 +9,32 @@
 
 </head>
 
-<body background="./imagenes/bg1 copia.jpeg">
+<body>
     <div class="container">    
     
-        <div id="pantalla-inicio"> 
+        <span id="pantalla-inicio" class="container"> 
             <!-- imagen INICIO-->
-            <img src="./imagenes/paginicio2.jpeg" alt="logo">
-            <button id="start-btn">START</button>
-        </div>
+            <img src="./imagenes/paginicio.jpeg" alt="logo" width="1200" height="1400">
+        </span>   
+    
+        <span class="container"> 
+            <button id="start-btn">
+                <img src="./imagenes/boton-start.png"/>
+            </button>
+        </span>
+        
+
     
         <!-- Pantalla inicial juego -->
-        <canvas id="my-canvas" width="920" height="1000"></canvas>
+        <canvas id="my-canvas" width="1200" height="1300"></canvas>
         
     
         <div id="pantalla-reinicio" class="container">
              <!-- imagen REINICIO -->               
-            <img src="./imagenes/gameoverDani.png" width="920" height="1000" alt="logo">
-            <button id="restart-btn">𝙋𝙇𝘼𝙔 𝘼𝙂𝘼𝙄𝙉!</button>
+            <img src="./imagenes/pantalla-reinicio.png" width="1200" height="1300" alt="logo">
+            <button id="restart-btn" type="button">              
+                <img src="./imagenes/boton-restart.png">
+            </button>
         </div>
     </div>
 

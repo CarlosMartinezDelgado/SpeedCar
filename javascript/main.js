@@ -12,6 +12,7 @@ let newGame;
 // * STATE MANAGEMENT FUNCTIONS
 
 const startGame = () => {    //desparecer el splash scren y aparecer el canvas
+    console.log("estoy iniciando el juego")
     splashScreen.style.display = "none";
     canvas.style.display = "flex" // los contenedores son flex
     
@@ -32,23 +33,25 @@ const startGame = () => {    //desparecer el splash scren y aparecer el canvas
     
     let startButton = document.querySelector("#start-btn")
     startButton.addEventListener("click", startGame)
-    
-    ///que el coche solo se mueva cuando hagamos click en las flechas.
-    /*const pulsarTecla = (tecla) => {
-        if(tecla.keyCode == 39) { // Pulsada flecha derecha
-            newGame.car.carMoveRight()
-        }
-        else if(tecla.keyCode == 37) { // pulsada flecha izquierda
-            newGame.car.carMoveLeft()
-        }
-    }
 
-    //canvas.addEventListener ("keydown", pulsarTecla);*/
 
-    // Empezar sencillo, el coche se mueve a la izquierda con click
-    const moveCarLeft = () => {
-       newGame.car.carMoveLeft()
+    let restartButton = document.querySelector("#restart-btn")
+    restartButton.addEventListener("click", startGame)
+
+    ///que el coche solo se mueva dentro del canvas cuando hagamos click en las flechas.
+    document.addEventListener("keydown", (event) => {
+        newGame.car.carMove(event);
+    }) 
+
+
+    //canvas.addEventListener ("keydown", pulsarTecla);
+    // El coche se mueve con flechas
+
+/*
+    const moveCar = () => {
+       newGame.car.moveCar()
     }
-    canvas.addEventListener("click", moveCarLeft)
+    canvas.addEventListener("click", moveCar)
     
+*/
 
