@@ -1,7 +1,7 @@
 class Game {
   constructor() {
     this.bg = new Image(); //el fondo
-    this.bg.src = "./imagenes/FondoCarretera.png"; //imagen de fondo
+    this.bg.src = "./imagenes/images.png"; //imagen de fondo
 
     this.car = new Car();
     this.speedCar = 50;
@@ -9,8 +9,8 @@ class Game {
     this.bumpArr = [new Bump(canvas.width / 2, "./imagenes/cocheDeFrente1.png")];
   
 
-    this.bumpYSeparation = 200;
-    this.bumpXSeparation = 100;
+    this.bumpYSeparation = 140;
+    this.bumpXSeparation = 180;
 
     this.isGameOn = true;
     this.score = 0;
@@ -24,15 +24,45 @@ class Game {
     //cuando cruce el Bache la linea, que cree otro Bache
     if (lastBump !== undefined && lastBump.y > this.bumpYSeparation) {
       //donde quiero que añada el BACHE
-      //agrego un nuevo BACHE posicion 1, 2 o 3
-      let randomX = Math.random() * 3;
+      //agrego un nuevo BACHE en varias posicion
+      let randomX = Math.random() * 19;
       if (randomX < 1) {
-        randomCoordX = canvas.width / 2 - 50;
+        randomCoordX = canvas.width / 2 - 80;
       } else if (randomX > 1 && randomX < 2) {
+        randomCoordX = canvas.width / 2 + 80;
+      } else if (randomX > 2 && randomX < 3) {
+        randomCoordX = canvas.width / 2 - 250;
+      } else if (randomX > 3 && randomX < 4) {
+        randomCoordX = canvas.width / 2 + 250;
+      } else if (randomX > 4 && randomX < 5) {
+        randomCoordX = canvas.width / 2 - 400;
+      } else if (randomX > 5 && randomX < 6) {
+        randomCoordX = canvas.width / 2 + 300;
+      } else if (randomX > 6 && randomX < 7) {
+        randomCoordX = canvas.width / 2 - 300;
+      } else if (randomX > 8 && randomX < 9) {
+        randomCoordX = canvas.width / 2 + 150;
+      } else if (randomX > 9 && randomX < 10) {
+        randomCoordX = canvas.width / 2 - 350;
+      } else if (randomX > 10 && randomX < 11) {
+        randomCoordX = canvas.width / 2 - 50;
+      } else if (randomX > 11 && randomX < 12) {
         randomCoordX = canvas.width / 2 + 50;
-      } else if (randomX < 2) {
+      } else if (randomX > 12 && randomX < 13) {
+        randomCoordX = canvas.width / 2 + 100;
+      } else if (randomX > 13 && randomX < 14) {
         randomCoordX = canvas.width / 2 - 100;
-      }
+      } else if (randomX > 14 && randomX < 15) {
+        randomCoordX = canvas.width / 2;
+      } else if (randomX > 15 && randomX < 16) {
+        randomCoordX = canvas.width / 2 + 250;
+      } else if (randomX > 16 && randomX < 17) {
+        randomCoordX = canvas.width / 2 - 380;
+      } else if (randomX > 17 && randomX < 18) {
+        randomCoordX = canvas.width / 2 + 330;
+      } else if (randomX > 18 && randomX < 19) {
+        randomCoordX = canvas.width / 2 - 350;
+    }
 
       //los BACHES estan siendo agregados pero nunca removidos
 

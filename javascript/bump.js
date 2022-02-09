@@ -3,7 +3,7 @@ class Bump {
     constructor (coordX, srcParam) { // cada vez que yo cree un Bache
         //Las propiedades del Bache
 
-    this.x = coordX   // tres posiciones fijas de salida 
+    this.x = coordX   // posiciones fijas de salida 
     this.y = 0;// recorre el eje y para acercarse al coche.
 
     this.width = 100;    //Comprobar
