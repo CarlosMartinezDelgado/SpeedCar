@@ -40,10 +40,10 @@ class Game {
 
   checkCarBumpCollision = (eachBump) => {
     if (
-      [(this.car.x)-30] < eachBump.x + eachBump.width &&
-      [(this.car.x)-30] + this.car.width > eachBump.x &&
-      [(this.car.y)+30] < eachBump.y + eachBump.height &&
-      this.car.height + (this.car.y)+30 > eachBump.y
+      [(this.car.x)] < eachBump.x + eachBump.width &&
+      [(this.car.x)] + this.car.width > eachBump.x &&
+      [(this.car.y)] < eachBump.y + eachBump.height &&
+      this.car.height + (this.car.y)> eachBump.y
     ) {
       // console.log("Colision")      // collision detected!
 

@@ -1,7 +1,7 @@
 // * GLOBAL VARIABLES
 
-let splashScreen = document.querySelector("#pantalla-inicio");
-let gameOverScreen = document.querySelector("#pantalla-reinicio");
+let splashScreen = document.querySelector("#pantallaInicio");
+let gameOverScreen = document.querySelector("#pantallaReinicio");
 let canvas = document.querySelector("#my-canvas");
 // crear el pincel
 let ctx = canvas.getContext("2d");
@@ -13,7 +13,9 @@ let newGame;
 
 const startGame = () => {    //desparecer el splash scren y aparecer el canvas
     console.log("estoy iniciando el juego")
-    splashScreen.style.display = "none";
+    pantallaReinicio.style.display = "none"; //hace falta "quitar" las imagenes tambien de aqui (no solo del css)
+    pantallaInicio.style.display = "none";
+    score.style.display = "none";
     canvas.style.display = "flex" // los contenedores son flex
     
         // ejecutar el juego
@@ -40,18 +42,8 @@ const startGame = () => {    //desparecer el splash scren y aparecer el canvas
 
     ///que el coche solo se mueva dentro del canvas cuando hagamos click en las flechas.
     document.addEventListener("keydown", (event) => {
-        newGame.car.carMove(event);
+        newGame.car.moveCar(event);
     }) 
-
-
-    //canvas.addEventListener ("keydown", pulsarTecla);
-    // El coche se mueve con flechas
-
-/*
-    const moveCar = () => {
-       newGame.car.moveCar()
-    }
-    canvas.addEventListener("click", moveCar)
     
-*/
+
 

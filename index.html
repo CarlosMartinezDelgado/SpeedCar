@@ -10,9 +10,12 @@
 </head>
 
 <body>
-    <div class="container">    
-    
-        <span id="pantalla-inicio" class="container"> 
+        
+        <div class="container"> 
+        
+
+        <!-- Pantalla inicial juego -->    
+        <span id="pantallaInicio" class="container"> 
             <!-- imagen INICIO-->
             <img src="./imagenes/paginicio.jpeg" alt="logo" width="1200" height="1400">
         </span>   
@@ -24,12 +27,15 @@
         </span>
         
 
+
     
-        <!-- Pantalla inicial juego -->
-        <canvas id="my-canvas" width="1200" height="1300"></canvas>
-        
+
+        <canvas id="my-canvas" width="1200" height="1300">
+            <span id="score">Score: 0</span>
+         </canvas>
+
     
-        <div id="pantalla-reinicio" class="container">
+        <div id="pantallaReinicio" class="container">
              <!-- imagen REINICIO -->               
             <img src="./imagenes/pantalla-reinicio.png" width="1200" height="1300" alt="logo">
             <button id="restart-btn" type="button">              
@@ -37,7 +43,7 @@
             </button>
         </div>
     </div>
-
+ 
 
     <script src="javascript/bump.js"></script>
     <script src="javascript/main.js"></script>
