@@ -1,11 +1,12 @@
 // * GLOBAL VARIABLES
 
-let splashScreen = document.querySelector("#pantallaInicio");
-let gameOverScreen = document.querySelector("#pantallaReinicio");
+let pantallaInicio = document.querySelector("#pantallaInicio");
+let pantallaReinicio = document.querySelector("#pantallaReinicio");
 let canvas = document.querySelector("#my-canvas");
 // crear el pincel
 let ctx = canvas.getContext("2d");
 let newGame;
+let score = 0
 
 
 
@@ -15,8 +16,8 @@ const startGame = () => {    //desparecer el splash scren y aparecer el canvas
     console.log("estoy iniciando el juego")
     pantallaReinicio.style.display = "none"; //hace falta "quitar" las imagenes tambien de aqui (no solo del css)
     pantallaInicio.style.display = "none";
-    score.style.display = "none";
-    canvas.style.display = "flex" // los contenedores son flex
+   /* score.style.display = "none";*/
+    canvas.style.display = "flex" //
     
         // ejecutar el juego
         // Cuando hago click en START crear una clase para luego poder hacer un new let newGame = new Game() y tener la bases ya hechas.
@@ -45,5 +46,11 @@ const startGame = () => {    //desparecer el splash scren y aparecer el canvas
         newGame.car.moveCar(event);
     }) 
     
+    /*
+     para agregar funcionalidad para calcular el botón que, cuando se hace clic, ejecutará la función de calcular todo
+  const calcularBachesEsquivados = documento.getElementById("calcular");
+  calcularBachesEsquivados.addEventListener();
 
 
+
+*/

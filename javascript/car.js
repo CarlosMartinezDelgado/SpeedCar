@@ -32,14 +32,5 @@ class Car {
         this.x = this.x + this.speedCar
       }
     }
-/*
-    carMoveLeft = () => {
-      this.x = this.x - (this.lateralSpeed)*2
-      console.log(`El coche se ha movido a la izquierda, nueva x = ${this.x}`)
-    }
-    carMoveRight = () => {
-      this.x = this.x + 2
-      console.log(`El coche se ha movido a la derecha, nueva x = ${this.x}`)
-    }
-      */
+
   }

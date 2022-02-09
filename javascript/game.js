@@ -55,7 +55,7 @@ class Game {
       canvas.style.display = "none";
 
       //  3. GAME OVER Y DARLE AL DISPLAY FLEX.
-      gameOverScreen.style.display = "flex";
+      pantallaReinicio.style.display = "flex";
     }
   };
 

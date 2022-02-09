@@ -7,7 +7,7 @@ body {
 }
 
 #pantallaInicio {
-  display: none;  /* con display ocultamos la pantalla dependiendo la que queramos activa*/
+  display: flex;  /* con display ocultamos la pantalla dependiendo la que queramos activa*/
   padding-left: 230px;
   background-attachment: fixed;
   margin: auto;
@@ -57,10 +57,10 @@ body {
 }
 
 #my-canvas {
-  display: flex;
+  display: none;
   background-attachment: fixed;
   margin: auto;
-  background-color: red;
+  background-color: rosybrown;
 
 }
 
