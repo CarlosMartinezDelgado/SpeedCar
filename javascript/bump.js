@@ -6,8 +6,8 @@ class Bump {
     this.x = coordX   // posiciones fijas de salida 
     this.y = 0;// recorre el eje y para acercarse al coche.
 
-    this.width = 100;    //Comprobar
-    this.height = 140; //tamaño
+    this.width = 90;    //Comprobar
+    this.height = 150; //tamaño
 
     this.img = new Image(); //imagen
     this.img.src = srcParam;

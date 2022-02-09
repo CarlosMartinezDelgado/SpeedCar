@@ -3,10 +3,10 @@ class Car {
       //aqui las propiedades de nuestro coche.
 
       this.x = canvas.width / 2; //posicion
-      this.y = canvas.height - 350;
+      this.y = canvas.height - 550;
   
       this.width = 80;
-      this.height = 120; //tamaño
+      this.height = 140; //tamaño
   
       this.img = new Image(); //imagen
       this.img.src = "./imagenes/coche1.png";

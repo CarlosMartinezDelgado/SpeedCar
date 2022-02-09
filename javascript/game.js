@@ -21,7 +21,7 @@ class Game {
     let lastBump = this.bumpArr[this.bumpArr.length - 1]; //identifica el ultimo Bache en el Array
     let randomCoordX = canvas.width / 2 - 200;
 
-    //cuando cruce el Bache la linea, que cree otro Bache
+    //cuando cruce el Bache la linea, que cree otro Bache y cuidado que siga fx si no hay ningun coche en el canvas
     if (lastBump !== undefined && lastBump.y > this.bumpYSeparation) {
       //donde quiero que añada el BACHE
       //agrego un nuevo BACHE en varias posicion
