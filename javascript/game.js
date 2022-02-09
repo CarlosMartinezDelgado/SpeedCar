@@ -7,11 +7,13 @@ class Game {
     this.speedCar = 50;
 
     this.bumpArr = [new Bump(canvas.width / 2, "./imagenes/cocheDeFrente1.png")];
+  
 
     this.bumpYSeparation = 200;
     this.bumpXSeparation = 100;
 
     this.isGameOn = true;
+    this.score = 0;
   }
 
   spawningBump = () => {
@@ -20,7 +22,7 @@ class Game {
     let randomCoordX = canvas.width / 2 - 200;
 
     //cuando cruce el Bache la linea, que cree otro Bache
-    if (lastBump.y > this.bumpYSeparation) {
+    if (lastBump !== undefined && lastBump.y > this.bumpYSeparation) {
       //donde quiero que añada el BACHE
       //agrego un nuevo BACHE posicion 1, 2 o 3
       let randomX = Math.random() * 3;
@@ -33,16 +35,29 @@ class Game {
       }
 
       //los BACHES estan siendo agregados pero nunca removidos
+
       let newBump = new Bump(randomCoordX, "./imagenes/cocheDeFrente1.png"); // crear un nuevo bache en la posicion random X, y = 0
       this.bumpArr.push(newBump);
+
+
     }
   };
 
+  totalScore = (eachBumpPar) => {
+    if (eachBumpPar.y > canvas.height - 200) {
+      this.score += 15;
+      scoreTotal.innerText = this.score;
+      this.bumpArr.shift()
+  }
+}
+
+
+
   checkCarBumpCollision = (eachBump) => {
     if (
-      [(this.car.x)] < eachBump.x + eachBump.width &&
-      [(this.car.x)] + this.car.width > eachBump.x &&
-      [(this.car.y)] < eachBump.y + eachBump.height &&
+      (this.car.x) < eachBump.x + eachBump.width &&
+      (this.car.x) + this.car.width > eachBump.x &&
+      (this.car.y) < eachBump.y + eachBump.height &&
       this.car.height + (this.car.y)> eachBump.y
     ) {
       // console.log("Colision")      // collision detected!
@@ -76,14 +91,20 @@ class Game {
     //2. Mover los elementos
     // mover el Bache
     this.bumpArr.forEach((eachBump) => {
-      eachBump.bumpMove();
-    });
+      eachBump.bumpMove(eachBump);
+
+    })
 
     this.spawningBump();
 
     this.bumpArr.forEach((eachBump) => {
       this.checkCarBumpCollision(eachBump);
+
+    this.bumpArr.forEach((eachBump) => {
+      this.totalScore(eachBump);
+    })
     });
+  
   
 
 
@@ -109,3 +130,4 @@ class Game {
 
 // La clase Game va a controlar la controlabilidad dl juego. Y al hacer RESTART creamos una nueva
 //version del juego (game) y de esta manera renueva el game para poder jugar de nuevo
+

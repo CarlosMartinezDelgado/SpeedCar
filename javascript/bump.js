@@ -6,12 +6,12 @@ class Bump {
     this.x = coordX   // tres posiciones fijas de salida 
     this.y = 0;// recorre el eje y para acercarse al coche.
 
-    this.width = 180;    //Comprobar
-    this.height = 180; //tamaño
+    this.width = 100;    //Comprobar
+    this.height = 140; //tamaño
 
     this.img = new Image(); //imagen
     this.img.src = srcParam;
-  
+    this.velocity = 2;
 
     }
 
@@ -29,9 +29,16 @@ class Bump {
 
     bumpMove = () => {
         //cambia su posicion el eje Y. y luego hay que llamar para que Fx
-        this.y = this.y + 2
+        this.y = this.y + this.velocity
+        
+      }
+
+  
+      velocityCar = (event) => {
+        if (event.key === "ArrowUp") {
+          this.velocity += 2
+        }
       }
     
      
-
 }

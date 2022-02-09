@@ -6,18 +6,20 @@ let canvas = document.querySelector("#my-canvas");
 // crear el pincel
 let ctx = canvas.getContext("2d");
 let newGame;
-let score = 0
+let pantallaScore = document.querySelector("#score")
+let scoreTotal = document.querySelector("#total-span");
+// let calcularBachesEsquivados = document.querySelector("#score span")
 
 
 
 // * STATE MANAGEMENT FUNCTIONS
 
 const startGame = () => {    //desparecer el splash scren y aparecer el canvas
-    console.log("estoy iniciando el juego")
+
     pantallaReinicio.style.display = "none"; //hace falta "quitar" las imagenes tambien de aqui (no solo del css)
     pantallaInicio.style.display = "none";
-   /* score.style.display = "none";*/
-    canvas.style.display = "flex" //
+    pantallaScore.style.display = "flex";
+    canvas.style.display = "flex"; //
     
         // ejecutar el juego
         // Cuando hago click en START crear una clase para luego poder hacer un new let newGame = new Game() y tener la bases ya hechas.
@@ -41,16 +43,14 @@ const startGame = () => {    //desparecer el splash scren y aparecer el canvas
     let restartButton = document.querySelector("#restart-btn")
     restartButton.addEventListener("click", startGame)
 
-    ///que el coche solo se mueva dentro del canvas cuando hagamos click en las flechas.
+    //que el coche solo se mueva dentro del canvas cuando hagamos click en las flechas.
     document.addEventListener("keydown", (event) => {
         newGame.car.moveCar(event);
+       // newGame.bump.velocityCar(event);
+
+// necesito invocar la fx velocityCar por cada elemento del bumArr  length
+// es mejor queryselector para acceder a los datos que estan dentro de otro elemento
+
+     
     }) 
     
-    /*
-     para agregar funcionalidad para calcular el botón que, cuando se hace clic, ejecutará la función de calcular todo
-  const calcularBachesEsquivados = documento.getElementById("calcular");
-  calcularBachesEsquivados.addEventListener();
-
-
-
-*/
