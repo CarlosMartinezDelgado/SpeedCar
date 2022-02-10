@@ -9,7 +9,7 @@ class Game {
     this.bumpArr = [new Bump(canvas.width / 2, "./imagenes/cocheDeFrente1.png")];
   
 
-    this.bumpYSeparation = 140;
+    this.bumpYSeparation = 180;
     this.bumpXSeparation = 180;
 
     this.isGameOn = true;
@@ -55,11 +55,11 @@ class Game {
       } else if (randomX > 14 && randomX < 15) {
         randomCoordX = canvas.width / 2;
       } else if (randomX > 15 && randomX < 16) {
-        randomCoordX = canvas.width / 2 + 250;
+        randomCoordX = canvas.width / 2 + 200;
       } else if (randomX > 16 && randomX < 17) {
         randomCoordX = canvas.width / 2 - 380;
       } else if (randomX > 17 && randomX < 18) {
-        randomCoordX = canvas.width / 2 + 330;
+        randomCoordX = canvas.width / 2 + 315;
       } else if (randomX > 18 && randomX < 19) {
         randomCoordX = canvas.width / 2 - 350;
     }

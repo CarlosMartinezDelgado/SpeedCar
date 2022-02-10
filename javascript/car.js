@@ -11,7 +11,7 @@ class Car {
       this.img = new Image(); //imagen
       this.img.src = "./imagenes/coche1.png";
 
-      this.speedCar = 10 
+      this.speedCar = 20 
   
     }
   

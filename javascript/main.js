@@ -8,7 +8,7 @@ let ctx = canvas.getContext("2d");
 let newGame;
 let pantallaScore = document.querySelector("#score")
 let scoreTotal = document.querySelector("#total-span");
-// let calcularBachesEsquivados = document.querySelector("#score span")
+// es mejor queryselector para acceder a los datos que estan dentro de otro elemento
 
 
 
