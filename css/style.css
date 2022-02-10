@@ -31,8 +31,8 @@ body {
   border-style: none;
   width: 150px;
   height: 100px;
-  margin-top: -50em;
-  margin-left: 70em;
+  margin-top: -70em;
+  margin-left: 60em;
 }
 
 #start-btn2 {
@@ -40,10 +40,10 @@ body {
   background-color: transparent;
   color: transparent;
   border-style: none;
-  width: 150px;
-  height: 100px;
+  width: 60px;
+  height: 50px;
   margin-top: -20em;
-  margin-left: 70em;
+  margin-left: 60em;
 }
 
 #start-btn:hover {

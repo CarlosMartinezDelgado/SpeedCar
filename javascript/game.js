@@ -17,6 +17,7 @@ class Game {
     this.score = 0;
 
     this.music = new Audio("./audio/sonidoCoches.mp3");
+    this.crashSound = new Audio("./audio/sonidoAccidente.mp3");
 
   }
 
@@ -96,6 +97,7 @@ class Game {
          1. DETENER EL LOOP --->CREAR UNA NUEVA PROPIEDAD BOLEANA GAME ON*/
       this.isGameOn = false;
       this.music.pause();
+      this.crashSound.play();
 
       //  2. OCULTAR EL canvas.
       canvas.style.display = "none";

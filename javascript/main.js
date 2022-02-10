@@ -20,6 +20,9 @@ const startGame = () => {
   pantallaScore.style.display = "flex";
   canvas.style.display = "flex"; //
   
+  /*let carStart = new Audio("./audio/cocheStarting.mp3");
+  carStart.play();*/
+
 
   // ejecutar el juego
   // Cuando hago click en START crear una clase para luego poder hacer un new let newGame = new Game() y tener la bases ya hechas.
@@ -54,27 +57,3 @@ document.addEventListener("keydown", (event) => {
   // necesito invocar la fx velocityCar por cada elemento del bumArr  length
   // es mejor queryselector para acceder a los datos que estan dentro de otro elemento
 });
-/*
- 
- // Carga un sonido a través de su fuente y lo inyecta de manera oculta
-const cargarSonido = function (fuente) {
-    const sonido = document.createElement("audio");
-    sonido.src = fuente;
-    sonido.setAttribute("preload", "auto");
-    sonido.setAttribute("controls", "none");
-    sonido.style.display = "none"; // <-- oculto
-    document.body.appendChild(sonido);
-    return sonido;
-};
-const botonReproducir = document.querySelector("#start-btn"),
-
-// El sonido que podemos reproducir o pausar
-
-const sonido = cargarSonido("sonido.flac");
-
-botonReproducir.onclick = () => {
-    sonido.play();
-};
-
-
- */
