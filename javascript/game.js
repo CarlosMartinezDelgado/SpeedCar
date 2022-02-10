@@ -15,6 +15,9 @@ class Game {
 
     this.isGameOn = true;
     this.score = 0;
+
+    this.music = new Audio("./audio/sonidoCoches.mp3");
+
   }
 
   spawningBump = () => {
@@ -36,15 +39,15 @@ class Game {
       } else if (randomX > 3 && randomX < 4) {
         randomCoordX = canvas.width / 2 + 250;
       } else if (randomX > 4 && randomX < 5) {
-        randomCoordX = canvas.width / 2 - 400;
+        randomCoordX = canvas.width / 2 - 360;
       } else if (randomX > 5 && randomX < 6) {
-        randomCoordX = canvas.width / 2 + 300;
+        randomCoordX = canvas.width / 2 + 280;
       } else if (randomX > 6 && randomX < 7) {
         randomCoordX = canvas.width / 2 - 300;
       } else if (randomX > 8 && randomX < 9) {
         randomCoordX = canvas.width / 2 + 150;
       } else if (randomX > 9 && randomX < 10) {
-        randomCoordX = canvas.width / 2 - 350;
+        randomCoordX = canvas.width / 2 - 310;
       } else if (randomX > 10 && randomX < 11) {
         randomCoordX = canvas.width / 2 - 50;
       } else if (randomX > 11 && randomX < 12) {
@@ -58,11 +61,11 @@ class Game {
       } else if (randomX > 15 && randomX < 16) {
         randomCoordX = canvas.width / 2 + 200;
       } else if (randomX > 16 && randomX < 17) {
-        randomCoordX = canvas.width / 2 - 380;
+        randomCoordX = canvas.width / 2 - 280;
       } else if (randomX > 17 && randomX < 18) {
-        randomCoordX = canvas.width / 2 + 315;
+        randomCoordX = canvas.width / 2 + 285;
       } else if (randomX > 18 && randomX < 19) {
-        randomCoordX = canvas.width / 2 - 350;
+        randomCoordX = canvas.width / 2 - 180;
       }
 
       //los BACHES estan siendo agregados pero nunca removidos
@@ -92,12 +95,14 @@ class Game {
       /*En este caso debemos terminar el juego.
          1. DETENER EL LOOP --->CREAR UNA NUEVA PROPIEDAD BOLEANA GAME ON*/
       this.isGameOn = false;
+      this.music.pause();
 
       //  2. OCULTAR EL canvas.
       canvas.style.display = "none";
 
       //  3. GAME OVER Y DARLE AL DISPLAY FLEX.
       pantallaReinicio.style.display = "flex";
+
     }
   };
 
@@ -150,34 +155,3 @@ class Game {
   };
 }
 
-// La clase Game va a controlar la controlabilidad dl juego. Y al hacer RESTART creamos una nueva
-//version del juego (game) y de esta manera renueva el game para poder jugar de nuevo
-
-/*El primer paso es dibujar un rectángulo grande con la configuración predeterminada.
-A continuación, guardamos este estado y hacemos cambios en el color de relleno. Luego dibujamos el segundo rectángulo azul y más pequeño y guardamos el estado.
-Nuevamente cambiamos algunas configuraciones de dibujo y dibujamos el tercer rectángulo blanco semitransparente.
-
-function draw() {
-  const ctx = document.getElementById('myCanvas').getContext('2d');
- 
-  ctx.fillRect(0, 0, 150, 150); // Draw a rectangle with default settings
-  ctx.save(); // Save the default state
- 
-  ctx.fillStyle = '#09F'; // Make changes to the settings
-  ctx.fillRect(15, 15, 120, 120); // Draw a rectangle with new settings
- 
-  ctx.save(); // Save the current state
-  ctx.fillStyle = '#FFF'; // Make changes to the settings
-  ctx.globalAlpha = 0.5;
-  ctx.fillRect(30, 30, 90, 90); // Draw a rectangle with new settings
- 
-  ctx.restore(); // Restore previous state
-  ctx.fillRect(45, 45, 60, 60); // Draw a rectangle with restored settings
- 
-  ctx.restore(); // Restore original state
-  ctx.fillRect(60, 60, 30, 30); // Draw a rectangle with restored settings
-}
- 
-draw();
-
-*/
