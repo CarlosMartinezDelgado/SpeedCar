@@ -6,54 +6,70 @@ let canvas = document.querySelector("#my-canvas");
 // crear el pincel
 let ctx = canvas.getContext("2d");
 let newGame;
-let pantallaScore = document.querySelector("#score")
+let pantallaScore = document.querySelector("#score");
 let scoreTotal = document.querySelector("#total-span");
 // es mejor queryselector para acceder a los datos que estan dentro de otro elemento
 
-
-
 // * STATE MANAGEMENT FUNCTIONS
 
-const startGame = () => {    //desparecer el splash scren y aparecer el canvas
+const startGame = () => {
+  //desparecer el splash scren y aparecer el canvas
 
-    pantallaReinicio.style.display = "none"; //hace falta "quitar" las imagenes tambien de aqui (no solo del css)
-    pantallaInicio.style.display = "none";
-    pantallaScore.style.display = "flex";
-    canvas.style.display = "flex"; //
-    
-        // ejecutar el juego
-        // Cuando hago click en START crear una clase para luego poder hacer un new let newGame = new Game() y tener la bases ya hechas.
-        newGame = new Game()
-        //console.log(newGame)
-        newGame.gameLoop() //acceder al juego pero cuidado. porque son variabbles que NO tengo acceso, parav eso creamos una vble no asiganrle ningun valor
-                            // y va a ser accesible desde cualquier lugar de mi codigo y a esa variable le voy a asignar un NEWGAME
-    }
-    
-    
-    
-    
-    // * ADD EVENT LISTENERS
-    
-    //primero hacer que al hacer click haga lo que queramos
-    
-    let startButton = document.querySelector("#start-btn")
-    startButton.addEventListener("click", startGame)
+  pantallaReinicio.style.display = "none"; //hace falta "quitar" las imagenes tambien de aqui (no solo del css)
+  pantallaInicio.style.display = "none";
+  pantallaScore.style.display = "flex";
+  canvas.style.display = "flex"; //
+
+  // ejecutar el juego
+  // Cuando hago click en START crear una clase para luego poder hacer un new let newGame = new Game() y tener la bases ya hechas.
+  newGame = new Game();
+  //console.log(newGame)
+  scoreTotal.innerText = 0
+  newGame.gameLoop(); //acceder al juego pero cuidado. porque son variabbles que NO tengo acceso, parav eso creamos una vble no asiganrle ningun valor
+  // y va a ser accesible desde cualquier lugar de mi codigo y a esa variable le voy a asignar un NEWGAME
+};
+
+// * ADD EVENT LISTENERS
+
+//primero hacer que al hacer click haga lo que queramos
+
+let startButton = document.querySelector("#start-btn");
+startButton.addEventListener("click", startGame);
+
+let restartButton = document.querySelector("#restart-btn");
+restartButton.addEventListener("click", startGame);
+
+//que el coche solo se mueva dentro del canvas cuando hagamos click en las flechas.
+document.addEventListener("keydown", (event) => {
+  newGame.car.moveCar(event);
+  newGame.bumpArr.forEach((velocidadCoche) => {
+    velocidadCoche.velocityCar(event);
+  });
+
+  // necesito invocar la fx velocityCar por cada elemento del bumArr  length
+  // es mejor queryselector para acceder a los datos que estan dentro de otro elemento
+});
+/*
+ 
+ // Carga un sonido a través de su fuente y lo inyecta de manera oculta
+const cargarSonido = function (fuente) {
+    const sonido = document.createElement("audio");
+    sonido.src = fuente;
+    sonido.setAttribute("preload", "auto");
+    sonido.setAttribute("controls", "none");
+    sonido.style.display = "none"; // <-- oculto
+    document.body.appendChild(sonido);
+    return sonido;
+};
+const botonReproducir = document.querySelector("#start-btn"),
+
+// El sonido que podemos reproducir o pausar
+
+const sonido = cargarSonido("sonido.flac");
+
+botonReproducir.onclick = () => {
+    sonido.play();
+};
 
 
-    let restartButton = document.querySelector("#restart-btn")
-    restartButton.addEventListener("click", startGame)
-
-    //que el coche solo se mueva dentro del canvas cuando hagamos click en las flechas.
-    document.addEventListener("keydown", (event) => {
-        newGame.car.moveCar(event);
-        newGame.bumpArr.forEach( (velocidadCoche) => {
-            velocidadCoche.velocityCar (event)
-        });
-        
-
-// necesito invocar la fx velocityCar por cada elemento del bumArr  length
-// es mejor queryselector para acceder a los datos que estan dentro de otro elemento
-
-     
-    }) 
-    
+ */

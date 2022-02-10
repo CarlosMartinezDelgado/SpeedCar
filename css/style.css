@@ -19,6 +19,12 @@ body {
   display: none;
 }
 
+#pantallaJuego {
+  flex-direction: row;
+  display: flex;
+
+}
+
 #start-btn {
   display: flex;
   background-color: transparent;
@@ -26,8 +32,19 @@ body {
   border-style: none;
   width: 150px;
   height: 100px;
-  margin-top: -40em;
-  margin-left: 80em;
+  margin-top: -50em;
+  margin-left: 70em;
+}
+
+#start-btn2 {
+  display: flex;
+  background-color: transparent;
+  color: transparent;
+  border-style: none;
+  width: 150px;
+  height: 100px;
+  margin-top: -20em;
+  margin-left: 70em;
 }
 
 #start-btn:hover {
@@ -37,8 +54,8 @@ body {
 }
 
 #restart-btn {
-  margin-top: 50em;
-  margin-left: -30em;
+  margin-top: 42em;
+  margin-left: -22em;
   background-color: transparent;
   color: transparent;
   border-style: none;
@@ -49,6 +66,11 @@ body {
   transition-duration: 1s;
   
 
+}
+
+.gameContainer {
+  flex-direction: column;
+  display: flex;
 }
 
 .container {
@@ -68,12 +90,22 @@ body {
 }
 
 #score {
-  display: none;
-  position: absolute;
   font-size: 2.5rem;
   text-align: center;
   opacity: 1.5;
-  margin-top: 1em;
-  margin-left: 10em;
-  color: rgb(12, 233, 104);
+  background-color: rgb(33, 173, 216);
+  color: black;
+	display:inline-block;
+	border:1px solid #000;
+	border-radius
+	:15px;
 }
+
+#play,#stop{
+	display:inline-block;
+	padding:16px;
+	border:1px solid #000;
+	border-radius
+	:5px;
+}
+iframe{display:none;}

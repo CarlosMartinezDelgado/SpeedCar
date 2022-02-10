@@ -6,8 +6,9 @@ class Game {
     this.car = new Car();
     this.speedCar = 50;
 
-    this.bumpArr = [new Bump(canvas.width / 2, "./imagenes/cocheDeFrente1.png")];
-  
+    this.bumpArr = [
+      new Bump(canvas.width / 2, "./imagenes/cocheDeFrente1.png"),
+    ];
 
     this.bumpYSeparation = 180;
     this.bumpXSeparation = 180;
@@ -62,33 +63,29 @@ class Game {
         randomCoordX = canvas.width / 2 + 315;
       } else if (randomX > 18 && randomX < 19) {
         randomCoordX = canvas.width / 2 - 350;
-    }
+      }
 
       //los BACHES estan siendo agregados pero nunca removidos
 
       let newBump = new Bump(randomCoordX, "./imagenes/cocheDeFrente1.png"); // crear un nuevo bache en la posicion random X, y = 0
       this.bumpArr.push(newBump);
-
-
     }
   };
 
   totalScore = (eachBumpPar) => {
-    if (eachBumpPar.y > canvas.height - 200) {
+    if (eachBumpPar.y > canvas.height - 50) {
       this.score += 15;
       scoreTotal.innerText = this.score;
-      this.bumpArr.shift()
-  }
-}
-
-
+      this.bumpArr.shift();
+    }
+  };
 
   checkCarBumpCollision = (eachBump) => {
     if (
-      (this.car.x) < eachBump.x + eachBump.width &&
-      (this.car.x) + this.car.width > eachBump.x &&
-      (this.car.y) < eachBump.y + eachBump.height &&
-      this.car.height + (this.car.y)> eachBump.y
+      this.car.x < eachBump.x + eachBump.width &&
+      this.car.x + this.car.width > eachBump.x &&
+      this.car.y < eachBump.y + eachBump.height &&
+      this.car.height + this.car.y > eachBump.y
     ) {
       // console.log("Colision")      // collision detected!
 
@@ -122,22 +119,17 @@ class Game {
     // mover el Bache
     this.bumpArr.forEach((eachBump) => {
       eachBump.bumpMove(eachBump);
-
-    })
+    });
 
     this.spawningBump();
 
     this.bumpArr.forEach((eachBump) => {
       this.checkCarBumpCollision(eachBump);
 
-    this.bumpArr.forEach((eachBump) => {
-      this.totalScore(eachBump);
-    })
+      this.bumpArr.forEach((eachBump) => {
+        this.totalScore(eachBump);
+      });
     });
-  
-  
-
-
 
     //3.  Dibujar los elementos que tenemos en propiedades
     ctx.drawImage(this.bg, 0, 0, canvas.width, canvas.height);
@@ -149,7 +141,7 @@ class Game {
     });
 
     //4. La recursion para la animacion
-    // requestAnimationFrame(gameLoop) NO vale porque 
+    // requestAnimationFrame(gameLoop) NO vale porque
     if (this.isGameOn) {
       requestAnimationFrame(this.gameLoop);
     }

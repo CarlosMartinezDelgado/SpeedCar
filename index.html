@@ -11,45 +11,55 @@
 
 <body>
         
-        <div class="container"> 
-        
+    <div class="container">         
 
-        <!-- Pantalla inicial juego -->    
-        <span id="pantallaInicio" class="container"> 
-            <!-- imagen INICIO-->
-            <img src="./imagenes/paginicio.jpeg" alt="logo" width="1200" height="1000">
-        </span>
-        
-        <div id="score">
-            <p>SCORE: <span id="total-span">0</span> </p>
-        </div>
-        
+        <!-- Pantalla inicial juego -->   
 
+        <div id="pantallaInicio" class="container"> 
+            <img src="./imagenes/paginicio.jpeg" alt="logo" width="1400" height="1320">
         <span class="container"> 
             <button id="start-btn">
                 <img src="./imagenes/boton-start.png"/>
             </button>
         </span>
-        
+        <span class="container"> 
+            <button id="start-btn2">
+                <img src="./imagenes/controles.png"/>
+            </button>
+        </span>
+        </div>
+       
+        <div class="gameContainer">
+         <canvas id="my-canvas" width="1200" height="1200" ></canvas>
+        <div id="score">
+            <p>SCORE: <span id="total-span">0</span> </p>
+        </div>
+        </div>
+
+
 
 
     
 
-        <canvas id="my-canvas" width="1200" height="1300" ></canvas>
 
     
         <div id="pantallaReinicio">
              <!-- imagen REINICIO -->
 
 
-            <img src="./imagenes/pantalla-reinicio2.png" width="800" height="800" alt="logo">
+            <img src="./imagenes/pantalla-reinicio2.png" width="1100" height="1000" alt="logo">
             
             <button id="restart-btn" type="button">              
                 <img src="./imagenes/boton-restart.png">
             </button>
         </div>
     </div>
- 
+
+
+    </div>
+
+
+
 
     <script src="javascript/bump.js"></script>
     <script src="javascript/main.js"></script>
