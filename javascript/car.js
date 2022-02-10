@@ -26,9 +26,9 @@ class Car {
 
       // Movimiento lateral del coche de Izq y Dcha
   moveCar = (event) => {
-      if (event.key === "ArrowLeft") {
+      if (event.key === "ArrowLeft" && this.x > 200) {
         this.x = this.x - this.speedCar
-      }else if (event.key === "ArrowRight") {
+      }else if (event.key === "ArrowRight" && this.x < (canvas.width - 200 - this.width)) {
         this.x = this.x + this.speedCar
       }
     }

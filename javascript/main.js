@@ -46,7 +46,10 @@ const startGame = () => {    //desparecer el splash scren y aparecer el canvas
     //que el coche solo se mueva dentro del canvas cuando hagamos click en las flechas.
     document.addEventListener("keydown", (event) => {
         newGame.car.moveCar(event);
-       // newGame.bump.velocityCar(event);
+        newGame.bumpArr.forEach( (velocidadCoche) => {
+            velocidadCoche.velocityCar (event)
+        });
+        
 
 // necesito invocar la fx velocityCar por cada elemento del bumArr  length
 // es mejor queryselector para acceder a los datos que estan dentro de otro elemento
