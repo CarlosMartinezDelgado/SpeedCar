@@ -18,7 +18,6 @@ class Game {
 
     this.music = new Audio("./audio/sonidoCoches.mp3");
     this.crashSound = new Audio("./audio/sonidoAccidente.mp3");
-
   }
 
   spawningBump = () => {
@@ -104,7 +103,6 @@ class Game {
 
       //  3. GAME OVER Y DARLE AL DISPLAY FLEX.
       pantallaReinicio.style.display = "flex";
-
     }
   };
 
@@ -156,4 +154,3 @@ class Game {
     // a este metodo de la clase hace falta usar THIS
   };
 }
-

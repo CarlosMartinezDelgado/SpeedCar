@@ -12,7 +12,7 @@ class Car {
     this.img.src = "./imagenes/coche1.png";
 
     this.speedCar = 20;
-    this.claxon = new Audio ("./audio/bocinaCoche.mp3");
+    this.claxon = new Audio("./audio/bocinaCoche.mp3");
   }
 
   // los methodos (acciones de nuestro coche)
@@ -31,7 +31,7 @@ class Car {
       this.x < canvas.width - 200 - this.width
     ) {
       this.x = this.x + this.speedCar;
-    } else if ( event.key === "ArrowDown" ) {
+    } else if (event.key === "ArrowDown") {
       this.claxon.play();
     }
   };

@@ -19,20 +19,19 @@ const startGame = () => {
   pantallaInicio.style.display = "none";
   pantallaScore.style.display = "flex";
   canvas.style.display = "flex"; //
-  
+
   /*let carStart = new Audio("./audio/cocheStarting.mp3");
   carStart.play();*/
-
 
   // ejecutar el juego
   // Cuando hago click en START crear una clase para luego poder hacer un new let newGame = new Game() y tener la bases ya hechas.
   newGame = new Game();
   //const music = new Audio("./audio/sonidoCoches.mp3");
   newGame.music.play();
-  newGame.music.loop =true;
+  newGame.music.loop = true;
   newGame.music.playbackRate = 2;
-  
-  scoreTotal.innerText = 0
+
+  scoreTotal.innerText = 0;
   newGame.gameLoop(); //acceder al juego pero cuidado. porque son variabbles que NO tengo acceso, parav eso creamos una vble no asiganrle ningun valor
   // y va a ser accesible desde cualquier lugar de mi codigo y a esa variable le voy a asignar un NEWGAME
 };

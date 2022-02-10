@@ -1,17 +1,16 @@
 body {
   margin: 0;
   background-size: cover;
- /* background-image: url("../imagenes/bg.jpeg");*/
+  /* background-image: url("../imagenes/bg.jpeg");*/
   overflow: hidden;
   display: flexbox;
 }
 
 #pantallaInicio {
-  display: flex;  /* con display ocultamos la pantalla dependiendo la que queramos activa*/
+  display: flex; /* con display ocultamos la pantalla dependiendo la que queramos activa*/
   padding-left: 230px;
   background-attachment: fixed;
   margin: auto;
-
 }
 
 #pantallaReinicio {
@@ -21,7 +20,6 @@ body {
 #pantallaJuego {
   flex-direction: row;
   display: flex;
-
 }
 
 #start-btn {
@@ -49,7 +47,6 @@ body {
 #start-btn:hover {
   transform: scale(1.2);
   transition-duration: 1s;
-
 }
 
 #restart-btn {
@@ -63,8 +60,6 @@ body {
 #restart-btn:hover {
   transform: scale(1.2);
   transition-duration: 1s;
-  
-
 }
 
 .gameContainer {
@@ -85,7 +80,6 @@ body {
   padding-left: 80;
   background-attachment: fixed;
   background-color: transparent;
-
 }
 
 #score {
@@ -94,7 +88,7 @@ body {
   opacity: 1.5;
   background-color: rgb(33, 173, 216);
   color: black;
-	display:none;
-	border:1px solid #000;
-	border-radius:15px;
+  display: none;
+  border: 1px solid #000;
+  border-radius: 15px;
 }
