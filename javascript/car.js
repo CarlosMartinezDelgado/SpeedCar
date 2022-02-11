@@ -13,6 +13,7 @@ class Car {
 
     this.speedCar = 20;
     this.claxon = new Audio("./audio/bocinaCoche.mp3");
+    this.speedUpSound = new Audio("./audio/Auto Acelerando Carrera - Efectos de Sonido.mp3");
   }
 
   // los methodos (acciones de nuestro coche)
@@ -31,8 +32,11 @@ class Car {
       this.x < canvas.width - 200 - this.width
     ) {
       this.x = this.x + this.speedCar;
-    } else if (event.key === "ArrowDown") {
+    } else if (event.key === " ") {
       this.claxon.play();
+      
+    } else if (event.key === "ArrowDown") {
+      this.speedUpSound.play()
     }
   };
 }

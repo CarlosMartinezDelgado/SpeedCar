@@ -20,9 +20,6 @@ const startGame = () => {
   pantallaScore.style.display = "flex";
   canvas.style.display = "flex"; //
 
-  /*let carStart = new Audio("./audio/cocheStarting.mp3");
-  carStart.play();*/
-
   // ejecutar el juego
   // Cuando hago click en START crear una clase para luego poder hacer un new let newGame = new Game() y tener la bases ya hechas.
   newGame = new Game();

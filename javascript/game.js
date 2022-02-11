@@ -18,6 +18,7 @@ class Game {
 
     this.music = new Audio("./audio/sonidoCoches.mp3");
     this.crashSound = new Audio("./audio/sonidoAccidente.mp3");
+   
   }
 
   spawningBump = () => {
@@ -39,7 +40,7 @@ class Game {
       } else if (randomX > 3 && randomX < 4) {
         randomCoordX = canvas.width / 2 + 250;
       } else if (randomX > 4 && randomX < 5) {
-        randomCoordX = canvas.width / 2 - 360;
+        randomCoordX = canvas.width / 2 - 350;
       } else if (randomX > 5 && randomX < 6) {
         randomCoordX = canvas.width / 2 + 280;
       } else if (randomX > 6 && randomX < 7) {
@@ -97,6 +98,7 @@ class Game {
       this.isGameOn = false;
       this.music.pause();
       this.crashSound.play();
+
 
       //  2. OCULTAR EL canvas.
       canvas.style.display = "none";

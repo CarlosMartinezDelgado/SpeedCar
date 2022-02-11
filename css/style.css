@@ -8,9 +8,7 @@ body {
 
 #pantallaInicio {
   display: flex; /* con display ocultamos la pantalla dependiendo la que queramos activa*/
-  padding-left: 230px;
-  background-attachment: fixed;
-  margin: auto;
+
 }
 
 #pantallaReinicio {
@@ -30,7 +28,7 @@ body {
   width: 150px;
   height: 100px;
   margin-top: -70em;
-  margin-left: 60em;
+  margin-left: 63em;
 }
 
 #start-btn2 {
@@ -38,10 +36,8 @@ body {
   background-color: transparent;
   color: transparent;
   border-style: none;
-  width: 60px;
-  height: 50px;
   margin-top: -20em;
-  margin-left: 60em;
+  margin-left: 75.5em;
 }
 
 #start-btn:hover {
@@ -50,8 +46,8 @@ body {
 }
 
 #restart-btn {
-  margin-top: 42em;
-  margin-left: -22em;
+  margin-top: 30em;
+  margin-left: -23em;
   background-color: transparent;
   color: transparent;
   border-style: none;
