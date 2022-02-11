@@ -1,14 +1,12 @@
 body {
   margin: 0;
   background-size: cover;
-  /* background-image: url("../imagenes/bg.jpeg");*/
   overflow: hidden;
   display: flexbox;
 }
 
 #pantallaInicio {
   display: flex; /* con display ocultamos la pantalla dependiendo la que queramos activa*/
-
 }
 
 #pantallaReinicio {

@@ -31,11 +31,11 @@ class Car {
       event.key === "ArrowRight" &&
       this.x < canvas.width - 200 - this.width
     ) {
-      this.x = this.x + this.speedCar;
-    } else if (event.key === " ") {
+      this.x = this.x + this.speedCar;    //Sonido Claxon
+    } else if (event.key === "ArrowDown") {
       this.claxon.play();
       
-    } else if (event.key === "ArrowDown") {
+    } else if (event.key === " ") {  //Sonido acelerar
       this.speedUpSound.play()
     }
   };

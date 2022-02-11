@@ -18,7 +18,6 @@ class Game {
 
     this.music = new Audio("./audio/sonidoCoches.mp3");
     this.crashSound = new Audio("./audio/sonidoAccidente.mp3");
-   
   }
 
   spawningBump = () => {
@@ -91,14 +90,11 @@ class Game {
       this.car.y < eachBump.y + eachBump.height &&
       this.car.height + this.car.y > eachBump.y
     ) {
-      // console.log("Colision")      // collision detected!
-
       /*En este caso debemos terminar el juego.
          1. DETENER EL LOOP --->CREAR UNA NUEVA PROPIEDAD BOLEANA GAME ON*/
       this.isGameOn = false;
       this.music.pause();
       this.crashSound.play();
-
 
       //  2. OCULTAR EL canvas.
       canvas.style.display = "none";
@@ -116,14 +112,13 @@ class Game {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
   };
 
-  // . todos nuestros metodos ejecutar el juego es una accion (funciones)
+  //. todos nuestros metodos ejecutar el juego es una accion (funciones)
   gameLoop = () => {
-    //console.log("el juego ya funciona")
     // 1. Limpiar el canvas
     this.clearCanvas(); //Borra el canvas, y lo vuelve a dibujar
 
     //2. Mover los elementos
-    // mover el Bache
+    // mover el Bache (coche Policia)
     this.bumpArr.forEach((eachBump) => {
       eachBump.bumpMove(eachBump);
     });
@@ -140,7 +135,6 @@ class Game {
 
     //3.  Dibujar los elementos que tenemos en propiedades
     ctx.drawImage(this.bg, 0, 0, canvas.width, canvas.height);
-    // this.car.carMove(); por que esto????????????????????????????
     this.car.drawCar();
 
     this.bumpArr.forEach((eachBump) => {
@@ -148,11 +142,8 @@ class Game {
     });
 
     //4. La recursion para la animacion
-    // requestAnimationFrame(gameLoop) NO vale porque
     if (this.isGameOn) {
       requestAnimationFrame(this.gameLoop);
     }
-    //trabajamos dentro una clase y para apuntar
-    // a este metodo de la clase hace falta usar THIS
   };
 }
