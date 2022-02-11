@@ -12,8 +12,12 @@ class Car {
     this.img.src = "./imagenes/coche1.png";
 
     this.speedCar = 20;
+
     this.claxon = new Audio("./audio/bocinaCoche.mp3");
+    this.claxon.volume = 0.1;
+
     this.speedUpSound = new Audio("./audio/AcelerandoCarreraDefini.mp3");
+    this.speedUpSound.volume = 0.2;
   }
 
   // los methodos (acciones de nuestro coche)

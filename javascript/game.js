@@ -17,7 +17,9 @@ class Game {
     this.score = 0;
 
     this.music = new Audio("./audio/sonidoCoches.mp3");
+    this.music.volume = 0.3;
     this.crashSound = new Audio("./audio/sonidoAccidente.mp3");
+    this.crashSound .volume = 0.1;
   }
 
   spawningBump = () => {
